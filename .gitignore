@@ -23,5 +23,25 @@
 /public/assets
 .byebug_history
 
+.gitignore
+	Gemfile
+	Gemfile.lock
+	README.md
+	Rakefile
+	app/
+	bin/
+	config.ru
+	config/
+	db/
+	lib/
+	log/
+	package.json
+	public/
+	tmp/
+	vendor/
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore application configuration
+/config/application.yml
