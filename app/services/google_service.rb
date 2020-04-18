@@ -1,11 +1,11 @@
 class GoogleService
-  def get_lat_lng(location)
+  def location_info(location)
     response = conn.get("maps/api/geocode/json") do |f|
        f.params['key'] = ENV['GoogleKey']
        f.params['address'] = location
      end
      json = JSON.parse(response.body, symbolize_names: true)
-     lat_lng = json[:results][0][:geometry][:location]
+     location_info = json[:results][0]
   end
 
   private
