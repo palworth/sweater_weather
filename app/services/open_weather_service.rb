@@ -1,10 +1,10 @@
 class OpenWeatherService
   def initialize(location_data)
-    @lat_data = location_data[:lat]
-    @lng_data = location_data[:lng]
+    @lat_data = location_data.latitude
+    @lng_data = location_data.longitude
   end
 
-  def weather_info
+  def weather_info #returns all info to init weather object
     response = conn.get("/data/2.5/onecall?") do |f|
       f.params['appid']= ENV['OpenWeatherKey']
       f.params["lat"]= @lat_data
