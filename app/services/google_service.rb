@@ -1,4 +1,5 @@
 class GoogleService
+
   def location_info(location)
     response = conn.get("maps/api/geocode/json") do |f|
        f.params['key'] = ENV['GoogleKey']
