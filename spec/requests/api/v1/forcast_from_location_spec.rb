@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Forcast API" do
-  it "sends weather data specific to denver" do
+  it "sends weather data specific to denver", :vcr do
 
     location = "denver, co"
 

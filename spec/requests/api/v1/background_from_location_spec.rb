@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Background API" do
-  it "sends a picture for background specific to denver" do
+  it "sends a picture for background specific to denver",:vcr do
 
     location = "denver"
 
