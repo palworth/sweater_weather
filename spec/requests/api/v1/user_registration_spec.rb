@@ -15,6 +15,7 @@ RSpec.describe 'User registration endpoint', :type => :request do
     expect(response).to be_successful
     user_key = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
     user = User.last
+    expect(user.email).to eq('whatever@example.com')
     expect(user_key).to eq({api_key: user.api_key})
   end
 
