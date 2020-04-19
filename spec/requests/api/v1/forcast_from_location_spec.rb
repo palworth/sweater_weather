@@ -8,5 +8,6 @@ describe "Forcast API" do
     get "/api/v1/forecast?location=#{location}"
 
     expect(response).to be_successful
+
   end
 end
