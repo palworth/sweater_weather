@@ -23,6 +23,4 @@ class Weather
     @current[:uvi]
   end
 
-
-
 end
