@@ -12,7 +12,9 @@ require 'webmock'
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
+  config.filter_sensitive_data('<GoogleKey>') { ENV['GoogleKey'] }
+  config.filter_sensitive_data('<OpenWeatherKey>') { ENV['OpenWeatherKey'] }
+  config.filter_sensitive_data('<UnsplashKey>') { ENV['UnsplashKey'] }
   config.configure_rspec_metadata!
 end
 
