@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'User registration endpoint', :type => :request do
-  it 'It can take in registration from user and give user API key' do
+  it 'It can take in registration from user and give user API key', :vcr do
 
     post '/api/v1/users', params: {
                                     email: 'whatever@example.com',
