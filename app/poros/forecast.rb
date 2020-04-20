@@ -20,7 +20,6 @@ class Forecast
     antipode_coords = create_or_find_antipode_location(location_info)
     service = OpenWeatherService.new(@location_data)
     @weather_data ||= AntipodeWeather.new(service.weather_info, location_info, search_params) #this gets serialized
-    # require "pry"; binding.pry
   end
 
   def create_or_find_antipode_location(location_info)
