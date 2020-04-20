@@ -16,6 +16,17 @@ class Forecast
     @weather_data ||= Weather.new(service.weather_info) #this gets serialized
   end
 
+  def by_antipode_location(location_info) #returns stored weather object or creates one to return
+    antipode_coords = create_or_find_antipode_location(location_info)
+    require "pry"; binding.pry
+    service = OpenWeatherService.new(@location_data)
+    @weather_data ||= Weather.new(service.weather_info) #this gets serialized
+  end
+
+  def create_or_find_antipode_location(location_info)
+    @location_data ||= AntipodeLocation.new(location_info)
+  end
+
 
   # def data_to be serialized
   #
