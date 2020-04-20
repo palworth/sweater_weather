@@ -9,14 +9,14 @@ require 'vcr'
 require 'webmock'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/vcr_cassettes"
-  config.hook_into :webmock
-  config.filter_sensitive_data('<GoogleKey>') { ENV['GoogleKey'] }
-  config.filter_sensitive_data('<OpenWeatherKey>') { ENV['OpenWeatherKey'] }
-  config.filter_sensitive_data('<UnsplashKey>') { ENV['UnsplashKey'] }
-  config.configure_rspec_metadata!
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.filter_sensitive_data('<GoogleKey>') { ENV['GoogleKey'] }
+#   config.filter_sensitive_data('<OpenWeatherKey>') { ENV['OpenWeatherKey'] }
+#   config.filter_sensitive_data('<UnsplashKey>') { ENV['UnsplashKey'] }
+#   config.configure_rspec_metadata!
+# end
 
 Capybara.register_driver :selenium do |app|
   options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
