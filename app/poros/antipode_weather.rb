@@ -1,23 +1,17 @@
 class AntipodeWeather
-  attr_reader :current, :hourly, :daily_forecast, :id
-  def initialize(weather_service_response,location_coords)
+  attr_reader :forecast, :location_name, :search_location, :id
+  def initialize(weather_service_response,location_coords, search_params)
     @id = nil
-    @current = weather_service_response[:current]
-    @location_name = antipode_city_name
-    @forecast = weather_service_response[:daily]
+    @forecast = weather_service_response[:daily][:data]
+    @location_name = antipode_city_name(location_coords)
+    @search_location = "#{search_params}"
   end
 
-  def current_humidity
-    @current[:humidity]
+  def antipode_city_name(location_coords)
+    service = GoogleService.new
+    service.city_name(location_coords[:lat], location_coords[:long])
   end
 
-  def current_visibility
-    @current[:visibility]
-  end
-
-  def antipode_city_name
-    require "pry"; binding.pry
-  end
 
 #   {
 #     "data": {

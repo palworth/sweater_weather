@@ -12,8 +12,8 @@ class Api::V1::AntipodesController < ApplicationController
 
     #SERIALIZE CORRECT RESPONSE
     forecast = Forecast.new
-    antipode_forecast_data = forecast.by_antipode_location(antipode_response_coords) #Antipode forcast data
-    render json: ForecastSerializer.new(antipode_forecast_data)
+    antipode_forecast_data = forecast.by_antipode_location(antipode_response_coords, params[:location]) #Antipode forcast data
+    render json: AntipodeForecastSerializer.new(antipode_forecast_data)
 
 end
 end
