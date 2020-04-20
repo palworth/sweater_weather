@@ -9,6 +9,15 @@ class GoogleService
      location_info = json[:results][0]
   end
 
+  def city_name(start_lat, start_lng)
+    response = conn.get("maps/api/geocode/json") do |f|
+       f.params['key'] = ENV['GoogleKey']
+       f.params['latlng'] = "#{start_lat}, #{start_lng}"
+     end
+     json = JSON.parse(response.body, symbolize_names: true)
+     json[:results][0][:address_components][0][:short_name]
+  end
+
   private
   def conn
     Faraday.new(url: 'https://maps.googleapis.com')

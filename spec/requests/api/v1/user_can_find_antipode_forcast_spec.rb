@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "Forcast API" do
   it "sends weather data specific to denver" do
 
-    location = "denver, co"
+    location = "Hong Kong"
 
     get "/api/v1/antipode?location=#{location}"
 
