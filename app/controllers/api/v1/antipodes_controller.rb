@@ -1,6 +1,6 @@
 class Api::V1::AntipodesController < ApplicationController
   def show
-    facade_response = AntipodeFacade.new
-    render json: AntipodeForecastSerializer.new(facade_response.show_helper(params[:location]))
+    antipode_results = AntipodeFacade.new(params[:location]).show_helper
+    render json: AntipodeForecastSerializer.new(antipode_results)
   end
 end
