@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'I can create a road trip' do
 
-    it 'can take in road trip info and return travel time and arrival forecast', :vcr do
+    it 'can take in road trip info and return travel time and arrival forecast', vcr: {:record => :new_episodes} do
       user = User.create!({
                             email: "test@email.com",
                             password: "password",
@@ -23,5 +23,7 @@ describe 'I can create a road trip' do
     expect(road_trip[:origin]).to eq('Denver,CO')
     expect(road_trip[:travel_time]).to eq('1 hour 10 mins')
     expect(road_trip[:destination]).to eq('Fort Collins,CO')
+    expect(road_trip[:arrival_forecast][:temperature]).to be_a Float
+    expect(road_trip[:arrival_forecast][:weather_description]).to be_a String
   end
 end
