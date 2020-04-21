@@ -3,19 +3,13 @@ class RoadTripsFacade
     @id = nil
     @origin = origin
     @destination = destination
+    @location_data = nil
   end
 
   def details
-    RoadTrip.new(@origin, @destination)
+    trip = RoadTrip.new(@origin, @destination)
   end
 
-  def travel_time
-    directions_info[:duration][:text]
-  end
-
-  def arrival_forecast
-    roadtrip_forecast
-  end
 
 private
 
@@ -24,19 +18,4 @@ private
     require "pry"; binding.pry
   end
 
-  def lat_long
-    "#{directions_info[:end_location][:lat]},#{directions_info[:end_location][:lng]}"
-  end
-
-  def travel_time_secs
-    directions_info[:duration][:value]
-  end
-
-  def darksky_prediction
-    DarkSkyService.new(lat_long).get_arrival_forecast(travel_time_secs)
-  end
-
-  def roadtrip_forecast
-    RoadtripForecast.new(darksky_prediction)
-  end
 end
