@@ -10,10 +10,10 @@ class ForecastFacade
     @location_data ||= Location.new(location_info)
   end
 
-  def by_location(location_info) #returns stored weather object or creates one to return
+  def by_location(location_info)
     create_or_find_location(location_info)
     service = OpenWeatherService.new(@location_data)
-    @weather_data ||= Weather.new(service.weather_info) #this gets serialized
+    @weather_data ||= Weather.new(service.weather_info) 
   end
 
 end

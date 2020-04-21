@@ -9,10 +9,10 @@ class Api::V1::RoadTripsController < ApplicationController
   end
 
   private
+  
   def success
     facade = RoadTripsFacade.new(params[:origin], params[:destination])
-
-    road_trip_info = facade.details # need to return road_trip
+    road_trip_info = facade.details
     render json: RoadtripSerializer.new(road_trip_info)
   end
 
