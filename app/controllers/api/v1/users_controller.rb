@@ -7,9 +7,9 @@ class Api::V1::UsersController < ApplicationController
       user_message = FailedUser.new(user)
       render json: FailedSerializer.new(user_message), status: 401
     end
- end
+  end
 
   def user_params
    params.permit(:email, :password, :password_confirmation)
- end
+  end
 end

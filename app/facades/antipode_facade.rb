@@ -13,13 +13,13 @@ class AntipodeFacade < ForecastFacade
     antipode_service = AntipodeService.new
     antipode_response_coords = antipode_service.opposite_city(start_city_lat, start_city_lng)
     name_of_antipode_city = location_service.city_name(antipode_response_coords[:lat], antipode_response_coords[:long])
-    by_antipode_location(antipode_response_coords) #Antipode forcast data
+    by_antipode_location(antipode_response_coords)
   end
 
-  def by_antipode_location(location_info) #returns stored weather object or creates one to return
+  def by_antipode_location(location_info)
     antipode_coords = create_or_find_antipode_location(location_info)
     service = OpenWeatherService.new(@location_data)
-    @weather_data ||= AntipodeWeather.new(service.weather_info, location_info, @location) #this gets serialized
+    @weather_data ||= AntipodeWeather.new(service.weather_info, location_info, @location)
   end
 
   def create_or_find_antipode_location(location_info)
