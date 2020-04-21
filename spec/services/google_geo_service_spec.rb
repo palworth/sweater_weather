@@ -5,7 +5,7 @@ RSpec.describe GoogleGeoApiService do
     describe '#location_info' do
       it "returns the location data of a given city and state", :vcr => { :re_record_interval => 7.days } do
         location = "denver,co"
-        service = GoogleGeoApiService.new
+        service = GoogleGeoApiService.new(location)
         location_info = service.location_info(location)
 
         expect(location_info).to be_a Hash
@@ -21,7 +21,7 @@ RSpec.describe GoogleGeoApiService do
 
       it "returns nil if location not found", :vcr => { :re_record_interval => 7.days } do
         location = "notaplace"
-        service = GoogleGeoApiService.new
+        service = GoogleGeoApiService.new(location)
         location_info = service.location_info(location)
         expect(location_info).to be_nil        # expect(location_info[:status]).to eq("ZERO_RESULTS")
       end
@@ -32,19 +32,10 @@ RSpec.describe GoogleGeoApiService do
         start = "denver,co"
         destination = "pueblo,co"
 
-        service = GoogleGeoApiService.new
-        travel_data = service.travel_info(start, destination)
+        service = GoogleGeoApiService.new(start)
+        travel_data = service.travel_directions(destination)
 
         expect(travel_data).to be_a Hash
-        expect(travel_data).to have_key(:distance)
-        expect(travel_data).to have_key(:duration)
-        expect(travel_data[:duration]).to have_key(:text)
-
-        expect(travel_data[:start_location]).to have_key(:lat)
-        expect(travel_data[:start_location]).to have_key(:lng)
-
-        expect(travel_data[:end_location]).to have_key(:lat)
-        expect(travel_data[:end_location]).to have_key(:lng)
       end
     end
   end
