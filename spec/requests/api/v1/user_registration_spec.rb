@@ -16,7 +16,7 @@ RSpec.describe 'User registration endpoint' do
     user_key = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
     user = User.last
     expect(user.email).to eq('whatever@example.com')
-    expect(user_key).to eq({api_key: user.api_key})
+    expect(user_key).to eq({api_key: user.api_key, :email=>"whatever@example.com"})
   end
 
   it 'Bad registration attempts not sucessfull and render faileduser serializer' do
