@@ -19,8 +19,8 @@ RSpec.describe 'I can create a user resource', :type => :request do
                                      'Accept' => 'application/json' }
 
     expect(response).to be_successful
-    login_key = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
-    expect(login_key).to eq({api_key: @user.api_key})
+    user_info = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+    expect(user_info).to eq({api_key: @user.api_key, :email=>"test@example.com"})
   end
 
   it 'will not authenticate a user with invalid information' do
