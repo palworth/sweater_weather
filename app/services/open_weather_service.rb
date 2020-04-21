@@ -9,9 +9,9 @@ class OpenWeatherService
       f.params['appid']= ENV['OpenWeatherKey']
       f.params["lat"]= @lat_data
       f.params["lon"]= @lng_data
+      f.params['units'] = 'imperial'
     end
     json = JSON.parse(response.body, symbolize_names: true)
-
   end
 
   private

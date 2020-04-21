@@ -1,4 +1,4 @@
-class Forecast
+class ForecastFacade
   attr_reader :id
   def initialize
     @location_data = nil
@@ -16,24 +16,4 @@ class Forecast
     @weather_data ||= Weather.new(service.weather_info) #this gets serialized
   end
 
-
-  # def data_to be serialized
-  #
-  # end
-
-  # def current
-  #
-  # end
-
-  # def five_day
-  #
-  # end
-
-  # def hourly
-  #
-  # end
-
-  # def detailed
-  #
-  # end
 end

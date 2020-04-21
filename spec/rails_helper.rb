@@ -16,6 +16,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('<OpenWeatherKey>') { ENV['OpenWeatherKey'] }
   config.filter_sensitive_data('<UnsplashKey>') { ENV['UnsplashKey'] }
   config.configure_rspec_metadata!
+  config.allow_http_connections_when_no_cassette = true
 end
 
 Capybara.register_driver :selenium do |app|
