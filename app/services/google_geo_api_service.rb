@@ -1,11 +1,14 @@
 class GoogleGeoApiService
+  def initialize(start_location)
+    @start_location = start_location
+  end
 
   def location_info(location)
     get_json(location)
   end
 
-  def travel_info(start, destination)
-    get_travel_json(start, destination)
+  def travel_directions(destination)
+    get_travel_json(destination)
   end
 
   private
@@ -23,12 +26,12 @@ def conn
     JSON.parse(response.body, symbolize_names: true)[:results].first
   end
 
-  def get_travel_json(start, destination)
+  def get_travel_json(destination)
     response = conn.get('directions/json') do |req|
-      req.params['origin'] = start
+      req.params['origin'] = @start_location
       req.params['destination'] = destination
       req.params['key'] = ENV['GoogleKey']
     end
-    JSON.parse(response.body, symbolize_names: true)[:routes].first[:legs].first
+    json = JSON.parse(response.body, symbolize_names: true)  # [:routes].first[:legs].first
   end
 end
