@@ -954,4 +954,665 @@ http_interactions:
         }
     http_version: null
   recorded_at: Mon, 20 Apr 2020 23:32:13 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?key=<GoogleKey>&latlng=39.74,%20-104.99
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 21 Apr 2020 00:56:48 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Denver, CO
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=175
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000,h3-T050=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "plus_code" : {
+              "compound_code" : "P2R6+22 Denver, CO, USA",
+              "global_code" : "85FQP2R6+22"
+           },
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "W Colfax Ave & Bannock St",
+                       "short_name" : "W Colfax Ave & Bannock St",
+                       "types" : [ "establishment", "point_of_interest", "transit_station" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "W Colfax Ave & Bannock St, Denver, CO 80202, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.740044,
+                       "lng" : -104.989681
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7413929802915,
+                          "lng" : -104.9883320197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7386950197085,
+                          "lng" : -104.9910299802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJvWP389R4bIcRSsAwYxTERus",
+                 "plus_code" : {
+                    "compound_code" : "P2R6+24 Denver, Colorado, United States",
+                    "global_code" : "85FQP2R6+24"
+                 },
+                 "types" : [ "establishment", "point_of_interest", "transit_station" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "McNichols Civic Center Building",
+                       "short_name" : "McNichols Civic Center Building",
+                       "types" : [ "premise" ]
+                    },
+                    {
+                       "long_name" : "144",
+                       "short_name" : "144",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "West Colfax Avenue",
+                       "short_name" : "W Colfax Ave",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "5307",
+                       "short_name" : "5307",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "McNichols Civic Center Building, 144 W Colfax Ave, Denver, CO 80202, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7398029,
+                          "lng" : -104.98922
+                       },
+                       "southwest" : {
+                          "lat" : 39.7395524,
+                          "lng" : -104.9898566
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7396815,
+                       "lng" : -104.989543
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7410266302915,
+                          "lng" : -104.9881893197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7383286697085,
+                          "lng" : -104.9908872802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJG8C_59R4bIcR0-vUETOAQJs",
+                 "types" : [ "premise" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "166",
+                       "short_name" : "166",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Highway 287",
+                       "short_name" : "US-287",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "5307",
+                       "short_name" : "5307",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "166 US-287, Denver, CO 80202, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.7399967,
+                       "lng" : -104.9900148
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7413456802915,
+                          "lng" : -104.9886658197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7386477197085,
+                          "lng" : -104.9913637802915
+                       }
+                    }
+                 },
+                 "place_id" : "EiExNjYgVVMtMjg3LCBEZW52ZXIsIENPIDgwMjAyLCBVU0EiGxIZChQKEglbm8n11HhshxFPTLUgTNF6kRCmAQ",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "109-169",
+                       "short_name" : "109-169",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "West Colfax Avenue",
+                       "short_name" : "US-287",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80204",
+                       "short_name" : "80204",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "109-169 US-287, Denver, CO 80204, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7404044,
+                          "lng" : -104.9892912
+                       },
+                       "southwest" : {
+                          "lat" : 39.7399944,
+                          "lng" : -104.990262
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7401001,
+                       "lng" : -104.9897139
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7415483802915,
+                          "lng" : -104.9884276197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7388504197085,
+                          "lng" : -104.9911255802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJW5vJ9dR4bIcRTky1IEzRepE",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Civic Center, Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.74058600000001,
+                          "lng" : -104.9874362
+                       },
+                       "southwest" : {
+                          "lat" : 39.726886,
+                          "lng" : -104.9982952
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7365497,
+                       "lng" : -104.9899995
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74058600000001,
+                          "lng" : -104.9874362
+                       },
+                       "southwest" : {
+                          "lat" : 39.726886,
+                          "lng" : -104.9982952
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJby9taix_bIcRIrNIJFw182M",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80202, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.76666780000001,
+                          "lng" : -104.986105
+                       },
+                       "southwest" : {
+                          "lat" : 39.736849,
+                          "lng" : -105.012165
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7541032,
+                       "lng" : -105.0002242
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.76666780000001,
+                          "lng" : -104.986105
+                       },
+                       "southwest" : {
+                          "lat" : 39.736849,
+                          "lng" : -105.012165
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJwTF6RcN4bIcRWd8aCrbRvX0",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver County, Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.76161889999999,
+                       "lng" : -104.9622498
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzWww5uJfbIcRBvfuO6cAtKY",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Colorado, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5500507,
+                       "lng" : -105.7820674
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJt1YYm3QUQIcR_6eQSTGDVMc",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: null
+  recorded_at: Tue, 21 Apr 2020 00:56:48 GMT
 recorded_with: VCR 5.1.0
