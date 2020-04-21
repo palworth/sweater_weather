@@ -14,8 +14,8 @@ class RoadTrip
   end
 
   def arrival_forecast
-    x = forecast_info
-    {weather_description: "#{x.description}", temperature: x.temp}
+    forecast = forecast_info
+    {weather_description: "#{forecast.description}", temperature: forecast.temp}
   end
 
   private
@@ -33,6 +33,4 @@ class RoadTrip
     location_data = location_service.location_info(@destination)
     Location.new(location_data)
   end
-
-
 end
