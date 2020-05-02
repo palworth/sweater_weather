@@ -1,4 +1,5 @@
 # README
+https://travis-ci.com/palworth/sweater_weather.svg?branch=master
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
